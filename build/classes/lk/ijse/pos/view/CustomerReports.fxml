@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" fx:id="root" prefHeight="266.0" prefWidth="758.0" style="-fx-background-color: white;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="lk.ijse.pos.controller.CustomerReportsController">
+   <children>
+      <ImageView id="imgHome" fitHeight="44.0" fitWidth="36.0" layoutX="32.0" layoutY="24.0" onMouseClicked="#navigateToHome" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/home-icon.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Label layoutX="134.0" layoutY="25.0" text="Customer Reports">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnAllCustomer" layoutX="456.0" layoutY="60.0" onAction="#btnAllCustomerOnClick" prefHeight="28.0" prefWidth="267.0" style="-fx-background-color: white;" text=" Generate all Customer Report" textAlignment="CENTER">
+         <font>
+            <Font name="Noto Sans Arabic UI Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXComboBox layoutX="56.0" layoutY="152.0" prefHeight="28.0" prefWidth="304.0" />
+   </children>
+</AnchorPane>

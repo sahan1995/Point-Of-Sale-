@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="ijse-fx-pos_My">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/dist/ijse-fx-pos_My.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="root" prefHeight="765.0" prefWidth="1004.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.pos.controller.PlaceOrderControllerMy">
+   <children>
+      <Label layoutX="83.0" layoutY="119.0" text="Order ID">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="423.0" layoutY="119.0" text="Order Date">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="83.0" layoutY="182.0" text="Customer ID ">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblStock" layoutX="538.0" layoutY="293.0" prefHeight="18.0" prefWidth="62.0" textFill="#3f3fee">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="754.0" layoutY="291.0" text="Qty">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblUnitPrice" layoutX="177.0" layoutY="294.0" prefHeight="18.0" prefWidth="162.0" textFill="#3f3fee">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="85.0" layoutY="245.0" text="Item Code">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="416.0" layoutY="292.0" text="Stock">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="416.0" layoutY="177.0" text="Customer Name">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="88.0" layoutY="294.0" text="Unit Price">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="416.0" layoutY="241.0" text="Description">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblDescript" layoutX="550.0" layoutY="240.0" prefHeight="18.0" prefWidth="214.0" textFill="#3f3fee">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblCustName" layoutX="538.0" layoutY="177.0" prefHeight="18.0" prefWidth="214.0" textFill="#3f3fee">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtOrderId" layoutX="171.0" layoutY="104.0" prefHeight="28.0" prefWidth="204.0" />
+      <JFXDatePicker fx:id="dtpOrderDate" layoutX="534.0" layoutY="104.0" prefHeight="28.0" prefWidth="246.0" />
+      <JFXComboBox fx:id="cmbCustId" layoutX="177.0" layoutY="163.0" onAction="#cmbOnAction" prefHeight="28.0" prefWidth="204.0" />
+      <JFXComboBox fx:id="cmbItemCode" layoutX="177.0" layoutY="226.0" onAction="#cmbCodeOnAction" prefHeight="28.0" prefWidth="204.0" />
+      <JFXTextField fx:id="txtQty" layoutX="801.0" layoutY="276.0" prefHeight="26.0" prefWidth="106.0" />
+      <TableView fx:id="tblOrder" layoutX="59.0" layoutY="383.0" prefHeight="251.0" prefWidth="893.0">
+         <columns>
+            <TableColumn prefWidth="126.0" text="Code" />
+            <TableColumn prefWidth="301.0" text="Description" />
+            <TableColumn prefWidth="134.0" text="Unit Price" />
+            <TableColumn prefWidth="137.0" text="Qty" />
+            <TableColumn minWidth="0.0" prefWidth="194.0" text="Total" />
+         </columns>
+      </TableView>
+      <JFXButton buttonType="RAISED" layoutX="602.0" layoutY="338.0" onAction="#btnAddOnAction" prefHeight="26.0" prefWidth="154.0" style="-fx-background-color: #33FF58;" text="Save">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></JFXButton>
+      <Label layoutX="53.0" layoutY="652.0" prefHeight="24.0" prefWidth="70.0" text="Total ">
+         <font>
+            <Font name="Cambria" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTotal" layoutX="123.0" layoutY="652.0" prefHeight="24.0" prefWidth="134.0" text="Total ">
+         <font>
+            <Font name="Cambria" size="20.0" />
+         </font>
+      </Label>
+      <JFXButton buttonType="RAISED" layoutX="764.0" layoutY="338.0" onAction="#btnRemoveAction" prefHeight="26.0" prefWidth="154.0" style="-fx-background-color: red;" text="Remove">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></JFXButton>
+      <JFXButton layoutX="752.0" layoutY="666.0" onAction="#btnPlaceOrderOnAction" prefHeight="26.0" prefWidth="204.0" style="-fx-background-color: lightgreen;" text="Place Order">
+         <font>
+            <Font name="Corbel Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="831.0" layoutY="712.0" onAction="#onclick" prefHeight="26.0" prefWidth="125.0" text="click" />
+      <Label layoutX="88.0" layoutY="25.0" text="Place Order">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <ImageView id="imgHome" fitHeight="53.0" fitWidth="55.0" layoutX="24.0" layoutY="30.0" onMouseClicked="#navigateToHome" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/home-icon.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+   </children>
+</AnchorPane>
